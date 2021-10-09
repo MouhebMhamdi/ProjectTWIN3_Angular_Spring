@@ -1,0 +1,22 @@
+
+
+<ul *ngIf="hide==false">
+    <li>
+       IdFournisseur: {{idFournisseur}}
+    </li>
+    <li>
+        Code: {{code}}
+    </li>
+    <li>
+        Libelle: {{libelle}}
+    </li>
+</ul>
+
+<button class="btn btn-outline-danger"
+(click)="changeHide()" *ngIf="hide==false">
+Hide
+</button>
+<button class="btn btn-outline-success"
+(click)="changeHideTrue()" *ngIf="hide==true">
+Show
+</button>

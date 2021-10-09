@@ -1,0 +1,17 @@
+
+<div *ngFor="let fournisseur of list ">
+<fieldset class="scheduler-border" *ngIf="fournisseur.idFournisseur<=100" (click)="delete(fournisseur)">
+    <legend class="scheduler-border" >idFournisseur : {{fournisseur.idFournisseur}}</legend>
+
+    <div class="col control-group"  [ngStyle]="{'background-color':fournisseur.libelle === 'hp' ? '#A0FF33' : '#E5FE0D' }">
+        <div class="col-sm-4"   >
+            Code : <span [ngStyle]="{'font-weight':fournisseur.code.substr(0, 2) === '2A' ? 'bold' : 'normal' }">{{fournisseur.code}}</span>
+        </div>
+        <div class="col-sm-4">
+            Libelle : {{fournisseur.libelle}}
+        </div>
+    </div>
+</fieldset>
+
+</div>
+
